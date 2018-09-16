@@ -25,21 +25,17 @@
       </div>
     </nav>
     <?php
-    if (!empty($_REQUEST['search'])) {
-        require 'config.php';
-        foreach (search($_REQUEST['search']) as $search) {
+        foreach (glob('~/Downloads/*') as $file) {
 
             ?>
             <div>
-              <a href="<?= htmlentities($search['href']) ?>" class="w-100 btn btn-outline-success"><?= htmlentities($search['name']) ?></a>
+              <a href="javascript:void(0)" class="w-100 btn btn-outline-success"><?= htmlentities(basename($file)) ?></a>
             </div>
             <?php
         }
-    }
 
     ?>
     <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
     <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
-
