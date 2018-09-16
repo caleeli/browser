@@ -1,6 +1,8 @@
+<pre>
 <?php
 if (empty($_REQUEST['u'])) {
     header('Location: index.php');
     return;
 }
-passthru('open ' . escapeshellarg($_REQUEST['u']));
+print_r('open ' . escapeshellarg($_REQUEST['u']));
+passthru('open ' . escapeshellarg($_REQUEST['u']) . ' 2>&1');
