@@ -31,7 +31,7 @@
 
             ?>
             <div>
-              <a href="<?= htmlentities($search['href']) ?>" class="w-100 btn btn-outline-success"><?= htmlentities($search['name']) ?></a>
+              <a href="<?= htmlentities('open.php?u=' . urlencode($search['href'])) ?>" class="w-100 btn btn-outline-success"><?= htmlentities($search['name']) ?></a>
             </div>
             <?php
         }
